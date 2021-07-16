@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { Box, Container, Grid } from '@material-ui/core';
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
 import './App.css';
+import FormRegister from './feature/auth/pages/FormRegister';
+import Header from './feature/header';
+import MainContent from './feature/mainContent';
+import NavBar from './feature/navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+     <Header />
+     <Box>
+       <Container>
+          <Grid container style={{marginTop: '70px'}}>
+              <Grid item lg={3}>
+                <NavBar />
+              </Grid>
+              <Grid item lg={9}>
+                <MainContent />
+              </Grid>
+          </Grid>
+       </Container>
+     </Box>
+     
+   </Router>
   );
 }
 

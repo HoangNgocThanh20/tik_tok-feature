@@ -1,0 +1,12 @@
+.headerSearch {
+    width: 350px;
+    outline: none;
+    border-radius: 50px;
+    border-color: transparent;
+    padding: 12px 16px;
+    background-color: rgb(235, 235, 235);
+}
+.headerSearch::after {
+    content: "";
+    display: block;
+}
